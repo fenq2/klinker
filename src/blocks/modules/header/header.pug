@@ -1,0 +1,298 @@
+header.header
+    .container
+        .header__top
+            nav.top-nav
+                ul.top-nav__list
+                    li.top-nav__item
+                        a(href="/").top-nav__link Акции
+                    li.top-nav__item
+                        a(href="/").top-nav__link Бренды
+                    li.top-nav__item
+                        a(href="/").top-nav__link Покупателям
+                        ul.top-nav__sublist
+                            li.top-nav__subitem
+                                a(href="/").top-nav__sublink О компании
+                            li.top-nav__subitem
+                                a(href="/").top-nav__sublink Скидки
+                            li.top-nav__subitem
+                                a(href="/").top-nav__sublink Новости
+                    li.top-nav__item
+                        a(href="/").top-nav__link О компании
+                    li.top-nav__item
+                        a(href="/").top-nav__link Доставка и оплата
+                    li.top-nav__item
+                        a(href="/").top-nav__link Возврат
+                    li.top-nav__item
+                        a(href="/").top-nav__link Сертификаты
+                    li.top-nav__item
+                        a(href="/").top-nav__link Партнерам
+                    li.top-nav__item
+                        a(href="/").top-nav__link Контакты
+            .header__contacts
+                .social.header__social
+                    a(href="/").social__link.social__link--green
+                        +icon('whatsapp', 'social__icon')
+                    a(href="/").social__link.social__link--blue
+                        +icon('telegram', 'social__icon')
+                .phones
+                    a(href="tel:+7 (495) 664-32-22").phones__link +7 (495) 664-32-22
+                    a(href="tel:+7 (915) 322-70-34").phones__link +7 (915) 322-70-34
+                .header__contacts-item
+                    a(href="/").callback-link Обратный звонок
+                    span.header__timetable Пн – Вс с 9:00 по 21:00
+        .header__main
+            a(href="/").logo
+                img(src="images/general/logo.png" width="116" height="61" alt="Логотип").logo__img
+            .catalog-prev
+                button(type="button").catalog-prev__open-btn 
+                    +icon('catalog-icon', 'catalog-prev__open-icon')
+                    span.catalog-prev__open-text Каталог
+                    .catalog-menu
+                        .catalog-menu__wrap
+                            ul.catalog-menu__list
+                                li.catalog-menu__list-item.catalog-menu__list-item--active
+                                    img(src="images/content/menu-img.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Фасадная плитка
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клинкерная фасадная плитка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Плитка под кирпич
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Плитка ручной формовки
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Плитка ригель формата
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Цокольная плитка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Облицовочная плитка
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img2.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Кирпич
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клинкерный кирпич
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Кирпич ручной формовки
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Керамический кирпич
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Декоративный кирпич
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img3.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Клинкерная брусчатка, тротуарная плитка
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клинкерная брусчатка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Тротуарная плитка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клинкерная тротуарная мозаика
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Бордюрный камень
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Системы водоотвода
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клей для укладки брусчатки
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img4.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Напольная плитка и ступени
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клинкерные ступени
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Напольная плитка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Ступень 1200 мм.
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Ступень с насечками
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Угловая ступень
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img5.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Строительные смеси
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Цветные кладочные растворы
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Затирочные смеси
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Клеевые смеси
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Теплые кладочные растворы
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Материалы для монтажа плитки и ступеней
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Материалы для мощения
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Декоративная штукатурка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Шпатлевка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Штукатурка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink KombiTherm
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Краска
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Сопутствующие товары
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img6.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Искусственный камень
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Искусственный камень для фасада
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Декоративный кирпич
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img7.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Керамические элементы
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Бордюрный камень
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Колпаки для забора
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Парапетная плитка
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Плитка для подоконников
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Профильный кирпич
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img8.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Утеплитель
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Утеплитель Green Planet (ШелтерЭкоСтрой)
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img9.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Термопанели
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Термопанели из пенополиуретана (ППУ)
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Термопанели из пенополистирола (ППС)
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Термопанели для цоколя
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Термопанели с плиткой Cerrad
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Система утепления KombiTherm
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Плиты ЦСП ОСП
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img10.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Системы водоотвеода
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink ACO
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img11.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Системы водоотвеода
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Поризованные керамические блоки
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Теплый кладочный раствор
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink BRAER
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Porotherm
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink ЛСР 
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img12.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Керамическая черепица
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Серия Rheiland Variabel
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Серия Tiefa Supra
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Серия Tiefa XLTOP 
+                                li.catalog-menu__list-item
+                                    img(src="images/content/menu-img13.png" width="30" height="30" alt="")
+                                    span.catalog-menu__list-text Керамическая черепица
+                                    +icon('arrow', 'catalog-menu__list-arrow')
+                                    .catalog-menu__dropdown
+                                        ul.catalog-menu__sublist
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Наличники
+                                            li.catalog-menu__subitem
+                                                a(href="/").catalog-menu__sublink Подоконники
+                            
+            .search-prev
+                input(type="text" placeholder="Что вы хотите найти?").search-prev__field
+                button(type="submit").search-prev__btn
+                    +icon('search', 'search-prev__btn-icon')
+            .user-nav
+                a(href="/").user-nav__item
+                    .user-nav__item-wrap
+                        +icon('heart', 'user-nav__icon')
+                    span.user-nav__num 99
+                .user-nav__item.basket-prev
+                    .user-nav__item-wrap
+                        +icon('basket', 'user-nav__icon')
+                    .basket-menu
+                        .basket-menu__wrap
+                            span.basket-menu__title Товары в корзине
+                            ul.basket-menu__list
+                                li.basket-menu__item.item-basket
+                                    .item-basket__img
+                                        img(src="images/content/pattern2.jpg" width="111" height="96" alt="").item-basket__pic
+                                    .item-basket__info
+                                        a(href="/").item-basket__title Клинкерная плитка Feldhaus Klinker R332NF9
+                                        .item-basket__options
+                                            span.item-basket__option 2134.28 р. за м2
+                                            span.item-basket__option Кол-во: 15 шт.
+                                        span.item-basket__price Всего: 14 000р.
+                                    button(type="button").item-basket__delete 
+                                        +icon('close', 'item-basket__delete-icon')
+                                        span.item-basket__delete-text Удалить
+                                li.basket-menu__item.item-basket
+                                    .item-basket__img
+                                        img(src="images/content/pattern.jpg" width="111" height="96" alt="").item-basket__pic
+                                    .item-basket__info
+                                        a(href="/").item-basket__title Клинкерная плитка Feldhaus Klinker R386NF14
+                                        .item-basket__options
+                                            span.item-basket__option 4276.42 р. за м2
+                                            span.item-basket__option Кол-во: 20 шт.
+                                        span.item-basket__price Всего: 36 000р.
+                                    button(type="button").item-basket__delete 
+                                        +icon('close', 'item-basket__delete-icon')
+                                        span.item-basket__delete-text Удалить
+                            .basket-menu__footer
+                                span.basket-menu__price Сумма корзины: 50 000 ₽
+                                a(href="/").btn.basket-menu__offer К оформлению
+                    span.user-nav__num 5
+                a(href="/").user-nav__item
+                    .user-nav__item-wrap
+                        +icon('weigh', 'user-nav__icon')
+                    span.user-nav__num 5
+        
+                                
+                

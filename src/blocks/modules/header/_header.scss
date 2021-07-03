@@ -1,0 +1,43 @@
+.header {
+    &__top {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 17px 0;
+        border-bottom: 1px solid #E4E4E4;
+    }
+
+    &__contacts {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+
+        &-item {
+            padding-left: 30px;
+        }
+    }
+
+    &__social {
+        margin-top: auto;
+    }
+
+    &__timetable {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        color: $grey;
+        padding-top: 7px;
+    }
+
+    &__main {
+        position: relative;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        padding: 13px 0;
+    }
+}

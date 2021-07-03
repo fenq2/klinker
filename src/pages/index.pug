@@ -1,0 +1,740 @@
+extends layouts/default
+
+block variables
+	- const title = "Главная страница"
+
+block content
+	include ../blocks/modules/header/header
+	
+	main.main
+		.breadcrumbs
+			.container
+				a(href="/").breadcrumbs__item.breadcrumbs__link Главаня страница
+				+icon('arrow', 'breadcrumbs__arrow')
+				a(href="/").breadcrumbs__item.breadcrumbs__link Каталог
+				+icon('arrow', 'breadcrumbs__arrow')
+				span.breadcrumbs__item.breadcrumbs__current Декоративный кирпич
+		.card
+			.container
+				h1.card__title Декоративный кирпич White Hills Бран Брик 696-40
+				.card__header
+					.rating
+						+icon('star', 'rating__star')
+						+icon('star', 'rating__star')
+						+icon('star', 'rating__star')
+						+icon('star', 'rating__star')
+						+icon('star', 'rating__star')
+						span.rating__num 4.5
+					.user-nav.card__nav
+						a(href="/").user-nav__item.card__nav-item
+							.user-nav__item-wrap
+								+icon('heart', 'user-nav__icon card__nav-icon')
+						a(href="/").user-nav__item.card__nav-item
+							.user-nav__item-wrap
+								+icon('weigh', 'user-nav__icon card__nav-icon')
+				.card__content
+					.card-slider
+						.swiper-container.card-slider__thumb(thumbsSlider="")
+							.swiper-wrapper
+								.swiper-slide.card-slider__thumb-item
+									img(src="images/content/pattern8.jpg" alt="").card-slider__img
+								.swiper-slide.card-slider__thumb-item
+									img(src="images/content/pattern7.jpg" alt="").card-slider__img
+								.swiper-slide.card-slider__thumb-item
+									img(src="images/content/pattern6.jpg" alt="").card-slider__img
+						.swiper-container.card-slider__main
+							.swiper-wrapper
+								.swiper-slide
+									.card-slider__achievs
+										span.card-slider__achiev Новинка
+										span.card-slider__achiev.card-slider__achiev--red -25%
+										span.card-slider__achiev.card-slider__achiev--blue Хит продаж
+									img(src="images/content/pattern8.jpg" alt="").card-slider__img
+								.swiper-slide
+									img(src="images/content/pattern7.jpg" alt="").card-slider__img
+								.swiper-slide
+									img(src="images/content/pattern6.jpg" alt="").card-slider__img
+							button(type="button").card-slider__btn.card-slider__prev
+								+icon('arrow2', 'card-slider__btn-arrow')
+							button(type="button").card-slider__btn.card-slider__next
+								+icon('arrow2', 'card-slider__btn-arrow')
+					.card__info
+						.card__info-header
+							span.card__code Артикул: 696-40
+							span.stock В наличии
+							.card__partner 
+								img(src="images/content/card-logo.png" alt="").card__partner-img
+						.card__block.card__category
+							span.card__block-title.card__category-title Категории
+							ul.card__category-list
+								li.card__category-item
+									a(href="/").card__category-link Бран Брик
+								li.card__category-item 
+									a(href="/").card__category-link Плитка ригель формата
+								li.card__category-item 
+									a(href="/").card__category-link Искусственный камень
+								li.card__category-item 
+									a(href="/").card__category-link Декоративный кирпич
+								li.card__category-item 
+									a(href="/").card__category-link White Hills
+						.card__block.card__feature
+							span.card__block-title.card__feature-title Характеристики 
+							.card__feature-table
+								.card__feature-item
+									span.card__feature-title Длина (см.)
+									span.card__feature-desc 51-52,5
+								.card__feature-item
+									span.card__feature-title Высота (см.)
+									span.card__feature-desc 4,0
+								.card__feature-item
+									span.card__feature-title Толщина (см.)
+									span.card__feature-desc 3,0-3,5
+								.card__feature-item
+									span.card__feature-title Норма расшивки (см.)
+									span.card__feature-desc 1,2
+								.card__feature-item
+									span.card__feature-title Упаковка в ГК (м2/м.п.)
+									span.card__feature-desc 0,914
+								.card__feature-item
+									span.card__feature-title Упаковка в МБ(м2/м.п.)
+									span.card__feature-desc -
+								.card__feature-item
+									span.card__feature-title Вес (кг/м2)
+									span.card__feature-desc 46,8
+							button(type="button").card__feature-more Показать еще
+					.card__checkout.checkout-card
+						.checkout-card__main
+							.checkout-card__header
+								.checkout-card__price
+									.checkout-card__price-item
+										span.checkout-card__price-num 1590 <span class="checkout-card__price-num checkout-card__price-num--small">₽</span>
+										span.checkout-card__price-desc Цена за м2
+									span.checkout-card__price-old 1610 ₽
+								.checkout-card__price
+									.checkout-card__price-item
+										span.checkout-card__price-num.checkout-card__price-num--dark 8 <span class="checkout-card__price-num checkout-card__price-num--dark checkout-card__price-num--small">€</span>
+										span.checkout-card__price-desc Цена за м2
+							.card__block.checkout-card__calculator.card-calculator
+								span.card__block-title Посчитать кол-во необходимых панелей
+								.card-calculator__main
+									.card-calculator__row
+										.card-calculator__block
+											span.card-calculator__block-title Общая площадь стен
+											.card-calculator__square
+												input(type="number" value="14" required).input-field.card-calculator__square-field
+												span.card-calculator__square-desc м<sup>2</sup>
+										.card-calculator__block
+											span.card-calculator__block-title Запас
+											.discount
+												.discount__item
+													input(type="radio" checked id="discount-1" name="discount").discount__field
+													label(for="discount-1").discount__label 5%
+												.discount__item
+													input(type="radio" id="discount-2" name="discount").discount__field
+													label(for="discount-2").discount__label 10%
+												.discount__item
+													input(type="radio" id="discount-3" name="discount").discount__field
+													label(for="discount-3").discount__label 15%
+												.discount__item
+													input(type="radio" id="discount-4" name="discount").discount__field
+													label(for="discount-4").discount__label 20%
+							.checkout-card__row
+								.counter
+									button(type="button").counter__btn.counter__prev -
+									input(type="number" value="36").counter__field
+									button(type="button").counter__btn.counter__next +
+								button(type="submit").btn.checkout-card__send Добавить в корзину
+							.checkout-card__row
+								a(href="/").checkout-card__link Купить в 1 клик
+								a(href="/").whatsapp-offer
+									span.whatsapp-offer__text Заказать через WhatsApp
+									.whatsapp-offer__img
+										+icon('whatsapp', 'whatsapp-offer__icon')
+						.checkout-card__footer
+							.tabs
+								ul.tabs__list
+									li(data-tab-name="tab1").tabs__list-item.tabs__list-item--active Доставка
+									li(data-tab-name="tab2").tabs__list-item Оплата
+									li(data-tab-name="tab3").tabs__list-item Скидки
+								.tabs__content
+									.tabs__content-item.tabs__content-item--active.tab1
+										p.tabs__text Доставка в Москву и область
+									.tabs__content-item.tab2
+										p.tabs__text Оплата тест
+									.tabs__content-item.tab3
+										p.tabs__text Скидки тест
+										
+								
+										
+							
+							
+							
+							
+		.section.yandex-review
+			.container
+				.section__header
+					h3.section-title Отзывы с Яндекс маркета
+					.slider-nav
+						button(type="button").slider-nav__btn.slider-nav__btn--prev.yandex-review__prev
+							+icon('arrow2', 'slider-nav__arrow')
+						button(type="button").slider-nav__btn.slider-nav__btn--next.yandex-review__next
+							+icon('arrow2', 'slider-nav__arrow')
+				.swiper-container.yandex-review__slider
+					.swiper-wrapper
+						.swiper-slide.yandex-review__item.review-yandex
+							.review-yandex__header
+								span.review-yandex__name Игнатов Б.
+								.rating.review-yandex__rating
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+							.review-yandex__options
+								span.review-yandex__option Отличный магазин
+								span.review-yandex__option Способ покупки, доставка
+							p.review-yandex__desc По работе занимаюсь фасадами домов. Если очередной клиент выбирает отделку фасадной плиткой, то всем однозначно рекомендую этот магазин. Проверено временем, здесь соотноешние цены-качества самое приятное.
+							a(href="/").review-yandex__all Посмотреть отзыв на Яндекс.Маркет
+						.swiper-slide.yandex-review__item.review-yandex
+							.review-yandex__header
+								span.review-yandex__name Игнатов Б.
+								.rating.review-yandex__rating
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+							.review-yandex__options
+								span.review-yandex__option Отличный магазин
+								span.review-yandex__option Способ покупки, доставка
+							p.review-yandex__desc По работе занимаюсь фасадами домов. Если очередной клиент выбирает отделку фасадной плиткой, то всем однозначно рекомендую этот магазин. Проверено временем, здесь соотноешние цены-качества самое приятное.
+							a(href="/").review-yandex__all Посмотреть отзыв на Яндекс.Маркет
+						.swiper-slide.yandex-review__item.review-yandex
+							.review-yandex__header
+								span.review-yandex__name Игнатов Б.
+								.rating.review-yandex__rating
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+							.review-yandex__options
+								span.review-yandex__option Отличный магазин
+								span.review-yandex__option Способ покупки, доставка
+							p.review-yandex__desc По работе занимаюсь фасадами домов. Если очередной клиент выбирает отделку фасадной плиткой, то всем однозначно рекомендую этот магазин. Проверено временем, здесь соотноешние цены-качества самое приятное.
+							a(href="/").review-yandex__all Посмотреть отзыв на Яндекс.Маркет
+						.swiper-slide.yandex-review__item.review-yandex
+							.review-yandex__header
+								span.review-yandex__name Игнатов Б.
+								.rating.review-yandex__rating
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+							.review-yandex__options
+								span.review-yandex__option Отличный магазин
+								span.review-yandex__option Способ покупки, доставка
+							p.review-yandex__desc По работе занимаюсь фасадами домов. Если очередной клиент выбирает отделку фасадной плиткой, то всем однозначно рекомендую этот магазин. Проверено временем, здесь соотноешние цены-качества самое приятное.
+							a(href="/").review-yandex__all Посмотреть отзыв на Яндекс.Маркет
+						.swiper-slide.yandex-review__item.review-yandex
+							.review-yandex__header
+								span.review-yandex__name Игнатов Б.
+								.rating.review-yandex__rating
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+									+icon('star', 'rating__star review-yandex__rating-star')
+							.review-yandex__options
+								span.review-yandex__option Отличный магазин
+								span.review-yandex__option Способ покупки, доставка
+							p.review-yandex__desc По работе занимаюсь фасадами домов. Если очередной клиент выбирает отделку фасадной плиткой, то всем однозначно рекомендую этот магазин. Проверено временем, здесь соотноешние цены-качества самое приятное.
+							a(href="/").review-yandex__all Посмотреть отзыв на Яндекс.Маркет
+		.section.infoblock
+			.container
+				.section__header
+					h3.section-title Описание
+					.slider-nav
+						button(type="button").slider-nav__btn.slider-nav__btn--prev.infoblock__prev-btn
+							+icon('arrow2', 'slider-nav__arrow')
+						button(type="button").slider-nav__btn.slider-nav__btn--next.infoblock__next-btn
+							+icon('arrow2', 'slider-nav__arrow')
+				.swiper-container.infoblock__slider
+					.swiper-wrapper
+						.swiper-slide.infoblock__slider-item
+							p.infoblock__desc Клинкерный кирпич Feldhaus Klinker K706DF75 “”vascu vulkano petino”, размер 240*75*52 <br><br>Товар поставляется согласно упаковочным единица завода-изготовителя. Расход товара на 1 кв.м.(п.м.) является ориентировочным и понимается всегда с учетом шва 10-12 мм для фасадной плитки и кирпича, 4-5 мм для тротуарного кирпича, 6-8 мм. для напольной плитки и ступеней.
+							.infoblock__prev
+								.infoblock__prev-item
+									img(src="images/content/pattern.jpg" width="221" height="188" alt="").infoblock__prev-img
+								.infoblock__prev-item
+									img(src="images/content/pattern.jpg" width="221" height="188" alt="").infoblock__prev-img
+								.infoblock__prev-item
+									img(src="images/content/pattern.jpg" width="221" height="188" alt="").infoblock__prev-img
+						.swiper-slide.infoblock__slider-item
+							p.infoblock__desc Клинкерный кирпич Feldhaus Klinker K706DF75 “”vascu vulkano petino”, размер 240*75*52 <br><br>Товар поставляется согласно упаковочным единица завода-изготовителя. Расход товара на 1 кв.м.(п.м.) является ориентировочным и понимается всегда с учетом шва 10-12 мм для фасадной плитки и кирпича, 4-5 мм для тротуарного кирпича, 6-8 мм. для напольной плитки и ступеней.
+							.infoblock__prev
+								.infoblock__prev-item
+									img(src="images/content/pattern.jpg" width="221" height="188" alt="").infoblock__prev-img
+								.infoblock__prev-item
+									img(src="images/content/pattern.jpg" width="221" height="188" alt="").infoblock__prev-img
+								.infoblock__prev-item
+									img(src="images/content/pattern.jpg" width="221" height="188" alt="").infoblock__prev-img
+		.section.section--padding
+			.container
+				.section__header
+					h3.section-title Похожие товары
+				.cards-list
+					.card-prev
+						span.card-prev__achiev Новинка
+						.card-prev__img
+							img(src="images/content/pattern2.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R335NF9
+							.card-prev__price
+								span.card-prev__price-old 2300 ₽
+								.card-prev__price-row
+									span.card-prev__price-num 2134.28 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern3.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R214NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 2668.73 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						span.card-prev__achiev.card-prev__achiev--red -25%
+						.card-prev__img
+							img(src="images/content/pattern4.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R228NF9
+							.card-prev__price
+								span.card-prev__price-old 2600 ₽
+								.card-prev__price-row
+									span.card-prev__price-num 2406.74 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						span.card-prev__achiev.card-prev__achiev--blue Хит продаж
+						.card-prev__img
+							img(src="images/content/pattern5.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R384NF14
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 4093.04 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern6.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R356NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 1994.56 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern6.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R356NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 1994.56 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+		.section.section--grey.reviews
+			.container
+				.reviews__content
+					.reviews__info
+						.reviews__header
+							h3.section-title Отзывы	
+							span.reviews__num Всего отзывов: 5
+						.reviews__list
+							.reviews__item.item-reviews
+								.item-reviews__header
+									a(href="/").item-reviews__user
+										.item-reviews__user-logo A
+										.item-reviews__user-info
+											span.item-reviews__user-name Алексей
+											span.item-reviews__user-date 15 Апреля 2019
+									.rating.item-reviews__rating
+										+icon('star', 'rating__star')
+										span.rating__num 4.5
+								p.item-reviews__desc Товар поставляется согласно упаковочным единицам завода-изготовителя. Расход товара на 1 кв. метр (пог. метр) является ориентировочным и понимается всегда с учетом шва 10-12 мм для фасадной плитки и кирпича, 4-5 мм для тротуарного кирпича, 6-8 мм для напольной плитки и ступеней.
+								.item-reviews__footer
+									button(type="button").item-reviews__btn Ответить
+									.grading
+										button(type="button").grading__btn
+											+icon('like', 'grading__btn-icon')
+											span.grading__btn-count 0
+										button(type="button").grading__btn
+											+icon('like', 'grading__btn-icon grading__btn-icon--rotate')
+											span.grading__btn-count 0
+							.reviews__item.item-reviews
+								.item-reviews__header
+									a(href="/").item-reviews__user
+										.item-reviews__user-logo A
+										.item-reviews__user-info
+											span.item-reviews__user-name Мария
+											span.item-reviews__user-date 15 Апреля 2019
+									.rating.item-reviews__rating
+										+icon('star', 'rating__star')
+										span.rating__num 4.5
+								p.item-reviews__desc При монтаже необходимо смешивать плитку (кирпич) из разных упаковок (поддонов), подрезать в размер рядовые и угловые ступени, разделять друг от друга фасадную плитку, поставляемую в сдвоенном или строенном виде.
+								.item-reviews__footer
+									button(type="button").item-reviews__btn Скрыть переписку
+									.grading
+										button(type="button").grading__btn
+											+icon('like', 'grading__btn-icon')
+											span.grading__btn-count 0
+										button(type="button").grading__btn
+											+icon('like', 'grading__btn-icon grading__btn-icon--rotate')
+											span.grading__btn-count 0
+								.reply
+									.reply__item.item-reply
+										a(href="/").item-reply__name Мистер Клинкер
+										span.item-reply__desc Благодарим за отзыв!
+						button(type="button").reviews__all Показать все отзывы
+					.reviews__add
+						span.reviews__add-title Оставьте свой отзыв, нам важно ваше мнение
+						form(method="post").form.reviews__form
+							.form__row
+								.form__group.form__group--width
+									label(for="name").form__label Имя
+									input(type="text" id="name" name="name" placeholder="Иван").input-field.form__field
+								.form__group.form__group--width
+									label(for="email").form__label E-mail
+									input(type="email" id="email" name="email" placeholder="example@gmail.com").input-field.form__field
+								.form__group
+									span.form__label Оценка товара
+									.rating-area
+										input(type="radio" id="star-1" name="rating")
+										label(for="star-1" title="Оценка «1»")
+										input(type="radio" id="star-2" name="rating")
+										label(for="star-2" title="Оценка «2»")
+										input(type="radio" id="star-3" name="rating")
+										label(for="star-3" title="Оценка «3»")
+										input(type="radio" id="star-4" name="rating")
+										label(for="star-4" title="Оценка «4»")
+										input(type="radio" id="star-5" name="rating")
+										label(for="star-5" title="Оценка «5»")
+							.form__group
+								label(for="desc").form__label Текст отзыва
+								textarea(id="desc" name="desc" placeholder="Начните писать здесь").input-field.form__textarea
+							.checkbox.policy
+								input(type="checkbox" id="policy").checkbox__field.policy__checkbox
+								label(for="policy").checkbox__label Я согласен с <a href="/" class="checkbox__link">Политикой конфиденциальности</a>
+							button(type="submit").btn.form__send Оставить отзыв
+						
+						
+							
+		.section.section--padding
+			.container
+				.section__header
+					h3.section-title Недавно вы смотрели
+				.cards-list
+					.card-prev
+						span.card-prev__achiev.card-prev__achiev--grey Уже в корзине
+						.card-prev__img
+							img(src="images/content/pattern2.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R335NF9
+							.card-prev__price
+								span.card-prev__price-old 2300 ₽
+								.card-prev__price-row
+									span.card-prev__price-num 2134.28 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern3.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R214NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 2668.73 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					
+					.card-prev
+						span.card-prev__achiev Новинка
+						.card-prev__img
+							img(src="images/content/pattern5.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R384NF14
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 4093.04 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern6.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R356NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 1994.56 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern7.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R332NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 2134.28 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						span.card-prev__achiev Новинка
+						.card-prev__img
+							img(src="images/content/pattern4.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R228NF9
+							.card-prev__price
+								span.card-prev__price-old 2600 ₽
+								.card-prev__price-row
+									span.card-prev__price-num 2406.74 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+		.section.section--padding
+			.container
+				.section__header
+					h3.section-title С этим товаром часто берут
+				.cards-list
+					.card-prev
+						span.card-prev__achiev Новинка
+						.card-prev__img
+							img(src="images/content/pattern4.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R228NF9
+							.card-prev__price
+								span.card-prev__price-old 2600 ₽
+								.card-prev__price-row
+									span.card-prev__price-num 2406.74 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern6.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R356NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 1994.56 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern7.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R332NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 2134.28 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						span.card-prev__achiev Новинка
+						.card-prev__img
+							img(src="images/content/pattern3.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R214NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 2668.73 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					
+					.card-prev
+						span.card-prev__achiev Новинка
+						.card-prev__img
+							img(src="images/content/pattern5.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R384NF14
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 4093.04 ₽
+									span.card-prev__price-title Специальная цена
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					.card-prev
+						.card-prev__img
+							img(src="images/content/pattern6.jpg" width="100%" height="157" alt="").card-prev__img-pic
+						.card-prev__main
+							a(href="/").card-prev__title Клинкерная плитка Feldhaus Klinker R356NF9
+							.card-prev__price
+								.card-prev__price-row
+									span.card-prev__price-num 1994.56 ₽
+								span.card-prev__price-desc цена за м2
+							.card-prev__nav
+								button(type="button").btn.card-prev__add В корзину
+								.user-nav.card-prev__user-nav
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('heart', 'user-nav__icon card-prev__nav-icon')
+									a(href="/").user-nav__item.card-prev__nav-item
+										.user-nav__item-wrap.card-prev__nav-wrap
+											+icon('weigh', 'user-nav__icon card-prev__nav-icon')
+					
+					
+								
+								
+								
+	include ../blocks/modules/footer/footer
+block scripts
+	script(src="js/vendor/libs.min.js")
+	script(src="js/main.min.js")

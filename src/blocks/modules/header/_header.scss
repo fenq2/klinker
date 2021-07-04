@@ -1,12 +1,41 @@
 .header {
     &__top {
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 17px 0;
-        border-bottom: 1px solid #E4E4E4;
+        @media screen and (max-width: 1400px) {
+            border-bottom: 1px solid #E4E4E4;
+        }
+
+        @media screen and (max-width: 680px) {
+            border-bottom: 0;
+        }
+
+        &-wrap {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 17px 0;
+            border-bottom: 1px solid #E4E4E4;
+
+            @media screen and (max-width: 1400px) {
+                border-bottom: 0;
+            }
+
+            @media screen and (max-width: 1000px) {
+                padding: 12px 0;
+            }
+
+            @media screen and (max-width: 680px) {
+                justify-content: center;
+                padding: 11px 0 0 0;
+            }
+        }
+    }
+
+    &__catalog-prev {
+        @media screen and (max-width: 680px) {
+            display: none;
+        }
     }
 
     &__contacts {
@@ -17,6 +46,18 @@
 
         &-item {
             padding-left: 30px;
+
+            @media screen and (max-width: 1000px) {
+                padding-left: 18px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
         }
     }
 
@@ -30,14 +71,39 @@
         line-height: 18px;
         color: $grey;
         padding-top: 7px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 12px;
+            line-height: 15px;
+            padding-top: 3px;
+        }
+    }
+
+    &__top-nav {
+        padding-right: 30px;
+        flex: 1;
+
+        @media screen and (max-width: 1400px) {
+            max-width: 540px;
+        }
+
+        @media screen and (max-width: 680px) {
+            display: none;
+        }
     }
 
     &__main {
-        position: relative;
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        align-items: center;
-        padding: 13px 0;
+        &-wrap {
+            position: relative;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            align-items: center;
+            padding: 13px 0;
+
+            @media screen and (max-width: 680px) {
+                padding: 15px 0;
+            }
+        }
     }
 }
